@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Low Life</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="card">
+            <div id="uppercard" class="uppercard"></div>
+            <div onclick="checkmediaquery()" onmouseenter="changeimage()" class="lowercard"></div>
+        </div>
+    </main>
+    <section id="first">
+        <video muted id="vid" class="hidden-xs hidden-sm hidden-md hidden-custom videosize embed-responsive-item"
+            autoplay="autoplay">
+            <source src="tshirt.mkv" type="video/mp4" />
+        </video>
+    </section>
+
+    <script>
+        function checkmediaquery() {
+                document.getElementById("first").style.display = "block";
+                var vid = document.getElementById("vid");
+                vid.play;
+                vid.onended = (event) => {
+                    location.replace("buy.html")
+                }
+                    document.getElementById("second").style.display = "block";
+                    var vidm = document.getElementById("vidmobile");
+                    vidm.play;
+                    vidm.onended = (event) => {
+                        location.replace("buy.html")
+                    }
+            }
+
+        function changeimage() {
+            const img = getElementById("uppercard");
+            img.style.background = "none";
+        }
+    </script>
+</body>
+
+</html>
